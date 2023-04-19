@@ -3,6 +3,14 @@
     {
       "id": "View Artists",
       "isDefault": true
+    },
+    {
+      "id": "Artist Profile",
+      "isDefault": false
+    },
+    {
+      "id": "Clients",
+      "isDefault": false
     }
   ],
   "viewMode": false,
