@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "get_artistCommissions",
+    "name": "tagInfo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/artists/<artistID>/commission_types"
+        "url": "web:4000/clients/images/{{ImageList.selectedItem.imageID}}/tags"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "View Artists",
+    "pageId": "Clients Search",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -37,17 +37,23 @@
       }
     },
     "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "ImageList.selectedItem.imageID"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "View Artists_get_artistCommissions",
+  "id": "Clients Search_tagInfo",
   "deleted": false,
-  "gitSyncId": "643b5960736989595d8856ff_643f5e54cfe91c53d199f3a8"
+  "gitSyncId": "643dd7ce2bef2907b966d20a_64414f3947a4904fae2b8a93"
 }

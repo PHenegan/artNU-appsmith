@@ -9,7 +9,7 @@
       "isDefault": false
     },
     {
-      "id": "Clients",
+      "id": "Clients Search",
       "isDefault": false
     },
     {
@@ -17,7 +17,7 @@
       "isDefault": false
     },
     {
-      "id": "Current Orders",
+      "id": "Clients Current Orders",
       "isDefault": false
     }
   ],

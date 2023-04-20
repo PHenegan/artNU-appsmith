@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Current Orders",
-    "slug": "current-orders",
+    "name": "Clients Current Orders",
+    "slug": "clients-current-orders",
     "layouts": [
       {
         "viewMode": false,
@@ -28,7 +28,7 @@
         },
         "layoutOnLoadActions": [],
         "validOnPageLoadActions": true,
-        "id": "Current Orders",
+        "id": "Clients Current Orders",
         "deleted": false,
         "policies": [],
         "userPermissions": []
