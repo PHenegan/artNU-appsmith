@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Clients",
+    "pageId": "Clients Search",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -47,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Clients_get_artists",
+  "id": "Clients Search_get_artists",
   "deleted": false,
   "gitSyncId": "643b5960736989595d8856ff_643f7adbcfe91c53d199f3cf"
 }

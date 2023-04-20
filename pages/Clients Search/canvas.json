@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Clients",
-    "slug": "clients",
+    "name": "Clients Search",
+    "slug": "clients-search",
     "layouts": [
       {
         "viewMode": false,
@@ -378,7 +378,7 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Clients_get_artists",
+              "id": "Clients Search_get_artists",
               "name": "get_artists",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -389,7 +389,7 @@
         ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Clients",
+        "id": "Clients Search",
         "deleted": false,
         "policies": [],
         "userPermissions": []
