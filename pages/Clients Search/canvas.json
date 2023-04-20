@@ -31,7 +31,7 @@
               "triggeredItemView": "{{{}}}",
               "widgetName": "ImageList",
               "requiresFlatWidgetChildren": true,
-              "listData": "[\n  {\n    \"imageID\": \"001\",\n\t\t\"firstName\": \"Patrick\",\n\t\t\"lastName\": \"Henegan\",\n    \"title\": \"first Image\",\n    \"minPrice\": 100,\n\t\t\"maxPrice\": 1000,\n\t\t\"description\": \"This is a test image\",\n\t\t\"image\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"imageID\": \"002\",\n    \"name\": \"Green\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  },\n  {\n    \"imageID\": \"003\",\n    \"name\": \"Red\",\n    \"img\": \"https://assets.appsmith.com/widgets/default.png\"\n  }\n]",
+              "listData": "{{get_commissions.data}}",
               "isCanvas": true,
               "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
@@ -69,6 +69,9 @@
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "listData"
                 }
               ],
               "leftColumn": 0,
@@ -1572,6 +1575,9 @@
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "listData"
                 }
               ],
               "leftColumn": 39,
@@ -1828,7 +1834,7 @@
               "currentItemsView": "{{[]}}",
               "triggeredItemView": "{{{}}}",
               "widgetName": "TagList",
-              "listData": "[\n  {\n    \"tagName\": \"001\",\n    \"type\": \"Blue\"\n  },\n  {\n    \"tagName\": \"002\",\n    \"type\": \"Green\"\n  },\n  {\n    \"tagName\": \"003\",\n    \"type\": \"Red\"\n  }\n]",
+              "listData": "{{tagInfo.data}}",
               "displayName": "List",
               "bottomRow": 110,
               "parentRowSpace": 10,
@@ -2044,6 +2050,30 @@
           ]
         },
         "layoutOnLoadActions": [
+          [
+            {
+              "id": "Clients Search_get_commissions",
+              "name": "get_commissions",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "minCurrency.value",
+                "maxCurrency.value",
+                "Tag_Input.text"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Clients Search_tagInfo",
+              "name": "tagInfo",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "ImageList.selectedItem.imageID"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
           [
             {
               "id": "Clients Search_artistInfo",
