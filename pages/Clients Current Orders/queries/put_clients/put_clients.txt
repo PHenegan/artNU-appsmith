@@ -1,0 +1,7 @@
+{{
+{
+	"clientFirstName": appsmith.store.loadedClient.firstName,
+	"clientLastName": appsmith.store.loadedClient.lastName,
+	"clientEmail": appsmith.store.loadedClient.email
+}
+}}

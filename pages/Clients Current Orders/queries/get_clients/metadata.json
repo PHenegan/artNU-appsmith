@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "tagInfo",
+    "name": "get_clients",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/clients/images/{{ImageList.selectedItem.imageID}}/tags"
+        "url": "web:4000/clients/{{InputEmail.text}}"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Clients Search",
+    "pageId": "Clients Current Orders",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -36,20 +36,24 @@
         "apiContentType": "none"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "datasourceUrl"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "ImageList.selectedItem.imageID"
+      "InputEmail.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Clients Search_tagInfo",
+  "id": "Clients Current Orders_get_clients",
   "deleted": false,
-  "gitSyncId": "6441676747a4904fae2b8ac1_64416aba47a4904fae2b8b11"
+  "gitSyncId": "6441676747a4904fae2b8ac1_6441768d47a4904fae2b8b3d"
 }
