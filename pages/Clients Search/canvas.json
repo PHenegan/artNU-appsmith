@@ -2046,7 +2046,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Clients Search_artistInfo",
               "name": "artistInfo",
               "confirmBeforeExecute": false,
               "pluginType": "API",
@@ -2056,7 +2055,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Clients Search_licenseInfo",
               "name": "licenseInfo",
               "confirmBeforeExecute": false,
               "pluginType": "API",
