@@ -364,9 +364,9 @@
               "isLoading": false,
               "responsiveBehavior": "fill",
               "mainCanvasId": "82fazf8eau",
-              "originalTopRow": 49,
+              "originalTopRow": 3082,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 89,
+              "originalBottomRow": 3122,
               "additionalStaticProps": [
                 "level",
                 "levelData",
@@ -756,9 +756,9 @@
               "isLoading": false,
               "responsiveBehavior": "fill",
               "mainCanvasId": "rei0uv4wdz",
-              "originalTopRow": 102,
+              "originalTopRow": 3135,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 130,
+              "originalBottomRow": 3163,
               "additionalStaticProps": [
                 "level",
                 "levelData",
@@ -1891,9 +1891,9 @@
               "isLoading": false,
               "responsiveBehavior": "fill",
               "mainCanvasId": "npyjkunpid",
-              "originalTopRow": 8,
+              "originalTopRow": 3041,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 44,
+              "originalBottomRow": 3077,
               "additionalStaticProps": [
                 "level",
                 "levelData",
@@ -2203,9 +2203,9 @@
               "isLoading": false,
               "responsiveBehavior": "fill",
               "mainCanvasId": "iykuq9was6",
-              "originalTopRow": 45,
+              "originalTopRow": 3078,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 76,
+              "originalBottomRow": 3109,
               "additionalStaticProps": [
                 "level",
                 "levelData",
@@ -2496,10 +2496,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 76,
+              "originalTopRow": 3109,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 97,
+              "originalBottomRow": 3130,
               "minDynamicHeight": 10
             },
             {
@@ -2511,8 +2511,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 1,
-              "bottomRow": 3038,
+              "topRow": 4,
+              "bottomRow": 3041,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -2521,7 +2521,7 @@
               "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
               "parentColumnSpace": 14.0625,
               "dynamicTriggerPathList": [],
-              "leftColumn": 0,
+              "leftColumn": 1,
               "dynamicBindingPathList": [
                 {
                   "key": "truncateButtonColor"
@@ -2541,7 +2541,7 @@
               "text": "{{get_specific_artist.data}}",
               "key": "dtpaes2tw6",
               "isDeprecated": false,
-              "rightColumn": 10,
+              "rightColumn": 11,
               "textAlign": "LEFT",
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "lpdh9etz7m",
@@ -2557,7 +2557,7 @@
               "originalTopRow": 1,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 5,
+              "originalBottomRow": 3038,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
