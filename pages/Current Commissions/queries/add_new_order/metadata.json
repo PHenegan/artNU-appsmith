@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{NewOrderForm.data}}",
+      "body": "{{New_Order.formData}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -53,7 +53,7 @@
     "messages": [],
     "jsonPathKeys": [
       "Artist_ID.text",
-      "NewOrderForm.data"
+      "New_Order.formData"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

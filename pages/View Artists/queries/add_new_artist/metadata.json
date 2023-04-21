@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{NewArtistForm.data}}",
+      "body": "{{New_Artist.formData}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,7 +52,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "NewArtistForm.data"
+      "New_Artist.formData"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
