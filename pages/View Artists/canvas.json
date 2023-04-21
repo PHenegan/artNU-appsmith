@@ -534,21 +534,6 @@
                 },
                 {
                   "key": "primaryColumns.lastName.computedValue"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.saveButtonColor"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.saveBorderRadius"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.discardBorderRadius"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isSaveDisabled"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
                 }
               ],
               "needsHeightForContent": true,
@@ -587,7 +572,7 @@
                 }
               },
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "columnUpdatedAt": 1682021591557,
+              "columnUpdatedAt": 1682042656193,
               "defaultSelectedRowIndices": [
                 0
               ],
@@ -597,17 +582,9 @@
                 "firstName",
                 "lastName",
                 "email",
-                "bio",
-                "EditActions1"
+                "bio"
               ],
-              "dynamicPropertyPathList": [
-                {
-                  "key": "primaryColumns.EditActions1.isSaveDisabled"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.isDiscardDisabled"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "Table",
               "bottomRow": 35,
               "columnWidthMap": {
@@ -621,9 +598,6 @@
               "dynamicTriggerPathList": [
                 {
                   "key": "onRowSelected"
-                },
-                {
-                  "key": "primaryColumns.EditActions1.onDiscard"
                 }
               ],
               "borderWidth": "1",
@@ -645,8 +619,8 @@
                   "enableSort": true,
                   "isVisible": true,
                   "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
+                  "isCellEditable": false,
+                  "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "bio",
@@ -674,8 +648,8 @@
                   "enableSort": true,
                   "isVisible": true,
                   "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
+                  "isCellEditable": false,
+                  "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "email",
@@ -703,8 +677,8 @@
                   "enableSort": true,
                   "isVisible": true,
                   "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
+                  "isCellEditable": false,
+                  "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "firstName",
@@ -732,8 +706,8 @@
                   "enableSort": true,
                   "isVisible": true,
                   "isDisabled": false,
-                  "isCellEditable": true,
-                  "isEditable": true,
+                  "isCellEditable": false,
+                  "isEditable": false,
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "lastName",
@@ -743,45 +717,6 @@
                   "sticky": "",
                   "validation": {},
                   "cellBackground": ""
-                },
-                "EditActions1": {
-                  "allowCellWrapping": false,
-                  "index": 4,
-                  "width": 150,
-                  "originalId": "EditActions1",
-                  "id": "EditActions1",
-                  "alias": "EditActions1",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "editActions",
-                  "textSize": "0.875rem",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellEditable": false,
-                  "isEditable": false,
-                  "isCellVisible": true,
-                  "isDerived": true,
-                  "label": " Discard",
-                  "isSaveVisible": false,
-                  "isDiscardVisible": true,
-                  "computedValue": "",
-                  "sticky": "right",
-                  "validation": {},
-                  "buttonStyle": "rgb(3, 179, 101)",
-                  "saveIconAlign": "left",
-                  "discardIconAlign": "left",
-                  "saveActionLabel": "Save",
-                  "discardActionLabel": "Discard",
-                  "saveButtonColor": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                  "discardButtonColor": "#F22B2B",
-                  "saveBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                  "discardButtonVariant": "TERTIARY",
-                  "isSaveDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-                  "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
-                  "onDiscard": "{{delete_artist.run(() => get_artists.run(), () => {})}}"
                 }
               },
               "onRowSelected": "{{storeValue('{{}}')}}",
