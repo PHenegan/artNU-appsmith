@@ -645,6 +645,7 @@
                       "resetFormOnClick": true,
                       "boxShadow": "none",
                       "widgetName": "Search_Submit",
+                      "onClick": "{{get_commissions.run()}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "displayName": "Button",
                       "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
@@ -657,6 +658,11 @@
                       "type": "BUTTON_WIDGET",
                       "hideCard": false,
                       "animateLoading": true,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
                       "leftColumn": 46,
                       "dynamicBindingPathList": [
                         {
@@ -950,13 +956,18 @@
               "borderColor": "#E0DEDE",
               "widgetName": "AuthorInfo",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
               "displayName": "Form",
               "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
               "searchTags": [
                 "group"
               ],
-              "topRow": 31,
-              "bottomRow": 70,
+              "topRow": 58,
+              "bottomRow": 97,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
@@ -971,6 +982,9 @@
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "children": [
@@ -1536,19 +1550,19 @@
               "dynamicHeight": "FIXED",
               "widgetId": "sp8ep2krau",
               "minWidth": 450,
-              "isVisible": true,
+              "isVisible": "{{ImageList.selectedItem != undefined}}",
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 31,
+              "originalTopRow": 58,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 70,
+              "originalBottomRow": 97,
               "minDynamicHeight": 10
             },
             {
-              "widgetName": "AuthorDeniedTags",
+              "widgetName": "Tag",
               "displayName": "Text",
               "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
               "searchTags": [
@@ -1556,8 +1570,8 @@
                 "paragraph",
                 "label"
               ],
-              "topRow": 83,
-              "bottomRow": 87,
+              "topRow": 31,
+              "bottomRow": 35,
               "parentRowSpace": 10,
               "type": "TEXT_WIDGET",
               "hideCard": false,
@@ -1580,7 +1594,7 @@
               ],
               "shouldTruncate": false,
               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-              "text": "Commission Type Tag List:",
+              "text": "Tag List:",
               "key": "2gbafddaoj",
               "isDeprecated": false,
               "rightColumn": 55,
@@ -1596,10 +1610,10 @@
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 83,
+              "originalTopRow": 31,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 87,
+              "originalBottomRow": 35,
               "fontSize": "1rem",
               "minDynamicHeight": 4
             },
@@ -1608,7 +1622,7 @@
               "requiresFlatWidgetChildren": true,
               "isCanvas": true,
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
-              "topRow": 87,
+              "topRow": 35,
               "pageSize": 3,
               "type": "LIST_WIDGET_V2",
               "itemSpacing": 8,
@@ -1883,7 +1897,7 @@
               "isLoading": false,
               "mainCanvasId": "gja8325rpv",
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "originalBottomRow": 110,
+              "originalBottomRow": 58,
               "additionalStaticProps": [
                 "level",
                 "levelData",
@@ -1895,7 +1909,7 @@
               "widgetName": "TagList",
               "listData": "{{tagInfo.data}}",
               "displayName": "List",
-              "bottomRow": 110,
+              "bottomRow": 58,
               "parentRowSpace": 10,
               "hideCard": false,
               "templateBottomRow": 16,
@@ -1913,7 +1927,7 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "responsiveBehavior": "fill",
-              "originalTopRow": 87,
+              "originalTopRow": 35,
               "selectedItemView": "{{{}}}"
             },
             {
@@ -1921,19 +1935,25 @@
               "borderColor": "#E0DEDE",
               "widgetName": "License",
               "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
               "displayName": "Form",
               "iconSVG": "/static/media/icon.ea3e08d130e59c56867ae40114c10eed.svg",
               "searchTags": [
                 "group"
               ],
-              "topRow": 70,
-              "bottomRow": 81,
+              "topRow": 97,
+              "bottomRow": 108,
               "parentRowSpace": 10,
               "type": "FORM_WIDGET",
               "hideCard": false,
               "shouldScrollContents": true,
               "animateLoading": true,
               "parentColumnSpace": 22.0625,
+              "dynamicTriggerPathList": [],
               "leftColumn": 39,
               "dynamicBindingPathList": [
                 {
@@ -1941,6 +1961,9 @@
                 },
                 {
                   "key": "boxShadow"
+                },
+                {
+                  "key": "isVisible"
                 }
               ],
               "children": [
@@ -2095,15 +2118,15 @@
               "dynamicHeight": "AUTO_HEIGHT",
               "widgetId": "pfy1f7giiw",
               "minWidth": 450,
-              "isVisible": true,
+              "isVisible": "{{ImageList.selectedItem != undefined}}",
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
               "responsiveBehavior": "fill",
-              "originalTopRow": 70,
+              "originalTopRow": 97,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 81,
+              "originalBottomRow": 108,
               "minDynamicHeight": 10
             }
           ]

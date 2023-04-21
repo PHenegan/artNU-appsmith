@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "post_orders",
+    "name": "delete_order",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/clients/orders"
+        "url": "web:4000/clients/orders/{{CancelOrderForm.formData.orderID}}"
       },
       "invalids": [],
       "messages": [],
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\nMake_New_Order.formData\n}}",
+      "body": "",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "DELETE",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -39,27 +39,27 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "body"
+        "key": "datasourceUrl"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\nMake_New_Order.formData\n"
+      "CancelOrderForm.formData.orderID"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Clients Current Orders_post_orders",
+  "id": "Clients Current Orders_delete_order",
   "deleted": false,
-  "gitSyncId": "6441676747a4904fae2b8ac1_64418aac47a4904fae2b8b4e"
+  "gitSyncId": "6441676747a4904fae2b8ac1_6441b78e47a4904fae2b8b81"
 }
