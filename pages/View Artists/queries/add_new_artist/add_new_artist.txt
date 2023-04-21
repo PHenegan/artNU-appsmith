@@ -1,1 +1,1 @@
-{{NewArtistForm.data}}
+{{New_Artist.formData}}
