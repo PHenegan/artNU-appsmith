@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "add_new_order",
+    "name": "delete_tag_deny",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/artists/{{Artist_ID.text}}/orders"
+        "url": "web:4000/artists/{{Input10.text}}/denylist"
       },
       "invalids": [],
       "messages": [],
@@ -16,7 +16,7 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Current Commissions",
+    "pageId": "Artist Profile",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
@@ -29,9 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{NewOrderForm.data}}",
+      "body": "{{deny_list_form.data}}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "DELETE",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -45,6 +45,9 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
+        "key": "datasourceUrl"
+      },
+      {
         "key": "body"
       }
     ],
@@ -52,15 +55,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Artist_ID.text",
-      "NewOrderForm.data"
+      "Input10.text",
+      "deny_list_form.data"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Current Commissions_add_new_order",
+  "id": "Artist Profile_delete_tag_deny",
   "deleted": false,
-  "gitSyncId": "643b5960736989595d8856ff_643f6fd4cfe91c53d199f3c0"
+  "gitSyncId": "644197ca162ce34fde0ec8a4_6441d4c4162ce34fde0ec939"
 }
