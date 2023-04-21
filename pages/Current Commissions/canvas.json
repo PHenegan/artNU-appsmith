@@ -1192,11 +1192,7 @@
                 "boxShadow": "none",
                 "buttonVariant": "PRIMARY"
               },
-              "dynamicPropertyPathList": [
-                {
-                  "key": "schema.__root_schema__.children.quote.defaultValue"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "JSON Form",
               "bottomRow": 132,
               "fieldLimitExceeded": false,

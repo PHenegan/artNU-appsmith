@@ -469,11 +469,7 @@
                 "boxShadow": "none",
                 "buttonVariant": "PRIMARY"
               },
-              "dynamicPropertyPathList": [
-                {
-                  "key": "schema.__root_schema__.children.link1.defaultValue"
-                }
-              ],
+              "dynamicPropertyPathList": [],
               "displayName": "JSON Form",
               "bottomRow": 135,
               "fieldLimitExceeded": false,
