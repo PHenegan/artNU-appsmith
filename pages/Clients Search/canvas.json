@@ -27,27 +27,14 @@
           "children": [
             {
               "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-              "currentItemsView": "{{[]}}",
-              "triggeredItemView": "{{{}}}",
-              "widgetName": "ImageList",
               "requiresFlatWidgetChildren": true,
-              "listData": "{{get_commissions.data}}",
               "isCanvas": true,
-              "displayName": "List",
               "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
               "topRow": 4,
-              "bottomRow": 110,
               "pageSize": 3,
-              "parentRowSpace": 10,
               "type": "LIST_WIDGET_V2",
               "itemSpacing": 8,
-              "hideCard": false,
-              "templateBottomRow": 16,
-              "mainContainerId": "sniim89ptg",
               "animateLoading": true,
-              "primaryKeys": "{{ImageList.listData.map((currentItem, currentIndex) => currentItem[\"imageID\"] )}}",
-              "parentColumnSpace": 20.0625,
-              "dynamicTriggerPathList": [],
               "dynamicBindingPathList": [
                 {
                   "key": "currentItemsView"
@@ -75,7 +62,6 @@
                 }
               ],
               "leftColumn": 0,
-              "gridType": "vertical",
               "enhancements": true,
               "children": [
                 {
@@ -163,7 +149,7 @@
                               "leftColumn": 0,
                               "defaultImage": "https://assets.appsmith.com/widgets/default.png",
                               "key": "ut82pj1ani",
-                              "image": "{{currentItem.img}}",
+                              "image": "{{currentItem.location}}",
                               "isDeprecated": false,
                               "rightColumn": 40,
                               "objectFit": "cover",
@@ -520,22 +506,12 @@
                   "flexLayers": []
                 }
               ],
-              "positioning": "fixed",
-              "key": "hq7i52589q",
-              "backgroundColor": "#d4d4d8",
-              "isDeprecated": false,
-              "rightColumn": 38,
               "itemBackgroundColor": "#FFFFFF",
-              "widgetId": "jvf13wa5qx",
               "accentColor": "{{appsmith.theme.colors.primaryColor}}",
               "isVisible": true,
-              "parentId": "0",
               "hasMetaWidgets": true,
-              "renderMode": "CANVAS",
               "isLoading": false,
-              "responsiveBehavior": "fill",
               "mainCanvasId": "wcgmszaw2v",
-              "originalTopRow": 45,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "originalBottomRow": 133,
               "additionalStaticProps": [
@@ -544,6 +520,35 @@
                 "prefixMetaWidgetId",
                 "metaWidgetId"
               ],
+              "currentItemsView": "{{[]}}",
+              "triggeredItemView": "{{{}}}",
+              "widgetName": "ImageList",
+              "listData": "{{get_commissions.data}}",
+              "displayName": "List",
+              "bottomRow": 110,
+              "parentRowSpace": 10,
+              "hideCard": false,
+              "templateBottomRow": 16,
+              "mainContainerId": "sniim89ptg",
+              "primaryKeys": "{{ImageList.listData.map((currentItem, currentIndex) => currentItem[\"imageID\"] )}}",
+              "parentColumnSpace": 20.0625,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClick"
+                }
+              ],
+              "gridType": "vertical",
+              "positioning": "fixed",
+              "key": "hq7i52589q",
+              "backgroundColor": "#d4d4d8",
+              "isDeprecated": false,
+              "rightColumn": 38,
+              "widgetId": "jvf13wa5qx",
+              "onItemClick": "{{licenseInfo.run(() => artistInfo.run(), () => {})}}",
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "responsiveBehavior": "fill",
+              "originalTopRow": 45,
               "selectedItemView": "{{{}}}"
             },
             {
@@ -1092,7 +1097,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Email: {{artistInfo.email}}",
+                      "text": "Email: {{artistInfo.data[0].email}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -1108,10 +1113,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 10,
+                      "originalTopRow": 8,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 14,
+                      "originalBottomRow": 12,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -1151,7 +1156,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Artist ID: {{artistInfo.artistID}}",
+                      "text": "Artist ID: {{ImageList.selectedItem.artistID}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 63,
@@ -1167,10 +1172,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 10,
+                      "originalTopRow": 13,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
-                      "originalBottomRow": 14,
+                      "originalBottomRow": 17,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -1210,7 +1215,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Bio:\n{{artistInfo.data.bio}}",
+                      "text": "Bio:\n{{artistInfo.data[0].bio}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -1226,7 +1231,7 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
-                      "originalTopRow": 14,
+                      "originalTopRow": 17,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
                       "originalBottomRow": 29,
@@ -1328,7 +1333,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Link1: {{artistInfo.data.link1}}",
+                      "text": "Link1: {{artistInfo.data[0].link1}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 30,
@@ -1345,8 +1350,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 29,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 33,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -1386,7 +1393,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Link3: {{artistInfo.data.link3}}",
+                      "text": "Link3: {{artistInfo.data[0].link3}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 30,
@@ -1403,8 +1410,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 33,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 37,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -1444,7 +1453,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Link4: {{artistInfo.data.link4}}",
+                      "text": "Link4: {{artistInfo.data[0].link4}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 59,
@@ -1461,8 +1470,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 33,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 37,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     },
@@ -1502,7 +1513,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "Link2: {{artistInfo.data.link2}}",
+                      "text": "Link2: {{artistInfo.data[0].link2}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 59,
@@ -1519,8 +1530,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 29,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 33,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
@@ -2071,7 +2084,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{licenseInfo.data.name}}",
+                      "text": "{{licenseInfo.data[0].licenseName}}",
                       "key": "2gbafddaoj",
                       "isDeprecated": false,
                       "rightColumn": 18,
@@ -2087,8 +2100,10 @@
                       "renderMode": "CANVAS",
                       "isLoading": false,
                       "responsiveBehavior": "fill",
+                      "originalTopRow": 5,
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "maxDynamicHeight": 9000,
+                      "originalBottomRow": 9,
                       "fontSize": "1rem",
                       "minDynamicHeight": 4
                     }
@@ -2150,9 +2165,7 @@
               "name": "tagInfo",
               "confirmBeforeExecute": false,
               "pluginType": "API",
-              "jsonPathKeys": [
-                "ImageList.selectedItem.imageID"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -2163,7 +2176,7 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [
-                "ImageList.selectedItem.imageID"
+                "ImageList.selectedItem.artistID"
               ],
               "timeoutInMillisecond": 10000
             },

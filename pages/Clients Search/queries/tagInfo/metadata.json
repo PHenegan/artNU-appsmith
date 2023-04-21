@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/clients/images/{{ImageList.selectedItem.imageID}}/tags"
+        "url": "web:4000/clients/tags"
       },
       "invalids": [],
       "messages": [],
@@ -41,9 +41,7 @@
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "ImageList.selectedItem.imageID"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
